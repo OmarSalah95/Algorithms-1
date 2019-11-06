@@ -2,8 +2,36 @@
 
 import argparse
 
+"""
+find_max_profit([10, 7, 5, 8, 11, 9]) = 6
+return 11-5 =6
+for each possible buy number(each except the last),
+find highest profit difference in array items AFTER it (sell) 
+[10, 7, 5, 8, 11, 9]
+  b            s
+p=1
+[10, 7, 5, 8, 11, 9]
+     b         s
+p=4
+[10, 7, 5, 8, 11, 9]
+        b      s
+p=6
+[10, 7, 5, 8, 11, 9]
+           b  s
+p is still 6
+[10, 7, 5, 8, 11, 9]
+               b  s
+p is still 6
+loop ends, return 6  
+"""
+
 def find_max_profit(prices):
-  pass
+  profit = -9999999999
+  for i, buy in enumerate(prices[:-1]):
+      for sell in prices[i+1:]:
+          if sell-buy > profit:
+              profit = sell-buy
+  return profit
 
 
 if __name__ == '__main__':
