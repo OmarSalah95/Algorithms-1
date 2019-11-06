@@ -1,9 +1,13 @@
 #!/usr/bin/python
 
-import math
-
 def recipe_batches(recipe, ingredients):
-  pass 
+  batches = 99999999
+
+  for item in recipe:
+      if not item in ingredients:
+          return 0
+      
+  return batches
 
 
 if __name__ == '__main__':
