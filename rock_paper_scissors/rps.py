@@ -10,7 +10,6 @@ def rock_paper_scissors(n):
         updated_possibilities.append(start+rest)
     return updated_possibilities
   
-  
   if n == 0:
     return [[]]
   possibilities = [['rock'], ['paper'], ['scissors']]
