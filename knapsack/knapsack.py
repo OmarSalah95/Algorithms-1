@@ -6,8 +6,13 @@ from collections import namedtuple
 Item = namedtuple('Item', ['index', 'size', 'value'])
 
 def knapsack_solver(items, capacity):
-  pass
-  
+  bag=[]
+  cv = 0
+  for item in bag: 
+      cv += item['value']
+  for item in items:
+    
+  return 0
 
 if __name__ == '__main__':
   if len(sys.argv) > 1:
